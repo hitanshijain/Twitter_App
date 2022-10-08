@@ -1,3 +1,6 @@
+import tweepy
+from tweepy import Client
+
 class TwitterClient(object):
     
     def __init__(self):
