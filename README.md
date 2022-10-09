@@ -18,7 +18,7 @@ The Twitter API is a set of programmatic endpoints that can be used to understan
 ## APIs
 
 ### Search Tweets:
-- In the get_tweets Python file added, after replacing the bearer token and putting a desired search query, we get the text of various tweets aligned to that query. 
+- In the search_tweets Python file added, after replacing the bearer token and putting a desired search query, we get the text of various tweets aligned to that query. 
 - For more than 100 Tweets, we will have to use the paginator and specify the limit i.e. the total number of Tweets required.
 - Try and except method is used to give error if the Twitter is not responding. 
 
