@@ -9,8 +9,11 @@ The Twitter API is a set of programmatic endpoints that can be used to understan
 - In order to work with Tweepy, make sure you have Python installed on your machine. Then, in the terminal run:
 
       pip install tweepy
+      import tweety
 
 - You will first need to import the tweepy library, then you will need to initialize the client by passing it your bearer token. Once you have the client initialized, you will be ready to start using the various functions in this library.
+
+      from tweety import Client
 
 ## APIs
 
@@ -24,7 +27,6 @@ The Twitter API is a set of programmatic endpoints that can be used to understan
 - Try and except method is used to give error if the Twitter is not responding. 
 
 ## Botometer
-Botometer runs analysis on whether the user is likely a bot or a human. The threshold score is anything less then 0.5 Botometer predicts the user is most likely controlled by human.
 
 - Run in the terminal:
       
@@ -32,4 +34,7 @@ Botometer runs analysis on whether the user is likely a bot or a human. The thre
       import botometer
 
 - Run Botometer, using Twitter’s Api, on a few users.
-- First I authenticated Botometer with Twitter’s API credentials similiar to Tweepy. I also needed a rapidapi key for Botometer 
+- First I authenticated Botometer with Twitter’s API credentials similiar to Tweepy. I also needed a rapidapi key for Botometer.
+- When I passed the username of a user, I got the details using the following command:
+
+      botometer.check_account(username)
