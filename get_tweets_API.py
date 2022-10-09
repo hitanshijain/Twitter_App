@@ -1,18 +1,11 @@
 import tweepy
-from tweepy import Client
+client = tweepy.Client(bearer_token='REPLACE_ME')
 
-client = Client(bearer_token='XXXXXXXXXXXXXXX')
-
-def get_tweets(query):
-    tweets = []
+def get_users():
     
-    try:
-        for tweet in tweepy.Paginator(client.search_recent_tweets, query=query,
-                              tweet_fields=['context_annotations', 'created_at'], max_results=100).flatten(limit=1000):
-            tweets.append(tweet.text)
-        return tweets
+    tweets = client.get_users_tweets(id=id, tweet_fields=['context_annotations','created_at','geo'])
     
-    except: 
-        print("Error calling Twitter API!")
-            
-# get_tweets('Hey!')
+    for tweet in tweets.data:
+        print(tweet)
+    
+get_tweets('2244994945')
