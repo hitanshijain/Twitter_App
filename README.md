@@ -7,7 +7,7 @@ The Twitter API is a set of programmatic endpoints that can be used to understan
 - In order to work with the Twitter API, we need to have a developer account and our API keys and tokens to connect to the API.
 
 - In order to work with Tweepy, make sure you have Python installed on your machine. Then, in the terminal run:
-      pip install tweepy
+      ### pip install tweepy
 
 - You will first need to import the tweepy library, then you will need to initialize the client by passing it your bearer token. Once you have the client initialized, you will be ready to start using the various functions in this library.
 
