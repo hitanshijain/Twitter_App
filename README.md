@@ -19,11 +19,23 @@ The Twitter API is a set of programmatic endpoints that can be used to understan
 
 ### Search Tweets:
 - In the search_tweets Python file added, after replacing the bearer token and putting a desired search query, we get the text of various tweets aligned to that query. 
-- For more than 100 Tweets, we will have to use the paginator and specify the limit i.e. the total number of Tweets required.
+- Using the below command, gives the tweet fields including the time at which it was created. We can give the value of max_results according to our required number of tweets. 
+
+      tweets = client.search_recent_tweets(query=query, tweet_fields=['context_annotations', 'created_at'], max_results=100)
+
+- If you need more than 100 Tweets, you will have to use the paginator and specify the limit i.e. the total number of Tweets that you want.
+
+      for tweet in tweepy.Paginator(client.search_recent_tweets, query=query,
+                              tweet_fields=['context_annotations', 'created_at'], max_results=100).flatten(limit=1000):
+            print(tweet)
+            
 - Try and except method is used to give error if the Twitter is not responding. 
 
 ### Get Tweets:
-- In the get_tweets Python file added, after replacing the bearer token and putting a user id, we get the tweets of that user. 
+- In the get_tweets Python file added, after replacing the bearer token and putting a user id, we get the tweets of that user using the command:
+
+      tweets = client.get_users_tweets(id=id, tweet_fields=['context_annotations','created_at','geo'])
+      
 - Try and except method is used to give error if the Twitter is not responding. 
 
 ## Botometer
