@@ -2,10 +2,10 @@
 
 The Twitter API is a set of programmatic endpoints that can be used to understand or build the conversation on Twitter. This API allows you to find and retrieve, engage with, or create a variety of different resources. 
 
-##Product - Finance and Stock Monitoring
+## Product - Finance and Stock Monitoring
 The stock market can be volatile and often fluctuates drastically in a short amount of time. However, some of the variables that affect the stock market can be considered before investing. For example, when deciding between investing in two companies like Amazon and Walmart, the sentiments received from the company about their latest products are evaluated. This will indicate which company is performing better in the current market and the decision can be made accordingly.
 
-##User Stories
+## User Stories
 
 - As a user, if I am looking to invest in the automobile industry and confused about choosing between company X and company Y, I can look at the sentiments received from the company for their latest products. It will help me to find the one that is performing better in the market. 
 - As a company manager, I want to know the reviews of my latest product and make improvements according to them. 
